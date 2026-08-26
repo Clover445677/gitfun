@@ -1,0 +1,7 @@
+.env
+credentials.json
+data/
+test_smm_briefs.db
+.pytest_cache/
+__pycache__/
+*.py[cod]
