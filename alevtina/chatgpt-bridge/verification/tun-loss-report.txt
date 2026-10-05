@@ -1,0 +1,8 @@
+﻿Literal-IP firewall checks 2026-10-05T13:55:46.3098849Z
+native-ip-tun-on: {"Success":true,"Country":"loc=US","Process":"codex-route-probe"}
+native-ip-tun-off: {"Success":false,"Error":"ConnectFailure","Process":"codex-route-probe"}
+PASS native process cannot connect to a literal Internet IP when TUN is off.
+PASS TUN restored in finally.
+native-ip-tun-restored: {"Success":false,"Error":"ConnectFailure","Process":"codex-route-probe"}
+native-ip-tun-restored: {"Success":true,"Country":"loc=US","Process":"codex-route-probe"}
+PASS native route returns to US after TUN restoration.

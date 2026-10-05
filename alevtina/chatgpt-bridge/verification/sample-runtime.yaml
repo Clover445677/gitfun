@@ -1,0 +1,49 @@
+proxies:
+  - name: 'USA'
+    type: vless
+    server: example.invalid
+    uuid: synthetic-not-a-real-secret
+  - name: 'Latvia'
+    type: vless
+proxy-groups:
+  - name: old-group
+    type: select
+    proxies: [USA, Latvia]
+mode: rule
+allow-lan: false
+log-level: warning
+find-process-mode: always
+mixed-port: 7890
+external-controller: 127.0.0.1:9090
+secret: "test-secret"
+tun:
+  enable: true
+  device: FlClashX
+  auto-route: true
+  stack: mixed
+  dns-hijack:
+    - any:53
+rules:
+  - "DOMAIN,localhost,DIRECT"
+  - "DOMAIN-SUFFIX,local,DIRECT"
+  - "IP-CIDR,127.0.0.0/8,DIRECT,no-resolve"
+  - "IP-CIDR,10.0.0.0/8,DIRECT,no-resolve"
+  - "IP-CIDR,172.16.0.0/12,DIRECT,no-resolve"
+  - "IP-CIDR,192.168.0.0/16,DIRECT,no-resolve"
+  - "IP-CIDR6,::1/128,DIRECT,no-resolve"
+  - "IP-CIDR6,fc00::/7,DIRECT,no-resolve"
+  - "IP-CIDR6,fe80::/10,DIRECT,no-resolve"
+  - "DOMAIN-SUFFIX,openai.com,USA"
+  - "DOMAIN-SUFFIX,chatgpt.com,USA"
+  - "DOMAIN-SUFFIX,chat.com,USA"
+  - "DOMAIN-SUFFIX,oaistatic.com,USA"
+  - "DOMAIN-SUFFIX,oaiusercontent.com,USA"
+  - "DOMAIN-SUFFIX,openaiapi-site.azureedge.net,USA"
+  - "DOMAIN-SUFFIX,chatgpt.livekit.cloud,USA"
+  - "DOMAIN-SUFFIX,o33249.ingest.sentry.io,USA"
+  - "PROCESS-NAME,ChatGPT.exe,USA"
+  - "PROCESS-NAME,codex.exe,USA"
+  - "PROCESS-NAME,Codex.exe,USA"
+  - "PROCESS-NAME,codex-code-mode-host.exe,USA"
+  - "PROCESS-NAME-REGEX,(?i)^codex(?:-.*)?\\.exe$,USA"
+  - "MATCH,Latvia"

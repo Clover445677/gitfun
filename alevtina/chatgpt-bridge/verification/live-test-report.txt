@@ -1,0 +1,62 @@
+13:57:34 Starting real ConnectAsync handler
+13:57:34 STATUS Настраиваю защищённый маршрут…
+13:57:36 STATUS ChatGPT подключён через США
+13:57:36 PASS real setup completed and settings persisted
+13:57:36 PASS portable guard task and actual firewall rules are healthy
+13:57:36 PASS legacy application files removed from Program Files and ProgramData
+13:57:36 PASS live core pins OpenAI and Codex to US and other traffic to DIRECT
+13:57:38 ChatGPT trace through protected bridge: loc=US
+13:57:38 PASS ChatGPT endpoint sees US egress
+13:57:38 Other sites in partial mode: loc=RU
+13:57:57 Native probe: {"Success":true,"Country":"loc=US","Process":"codex-route-probe"}
+13:57:57 PASS native Codex-like process reaches ChatGPT through US with physical-interface blocks enabled
+13:57:57 PASS startup checkbox off removes startup entry
+13:57:57 PASS startup checkbox on references this application folder
+13:57:58 STATUS Проверяю серверы: 1 из 24
+13:57:58 STATUS Проверяю серверы: 2 из 24
+13:57:58 STATUS Проверяю серверы: 3 из 24
+13:57:58 STATUS Проверяю серверы: 4 из 24
+13:57:58 STATUS Проверяю серверы: 5 из 24
+13:57:59 STATUS Проверяю серверы: 6 из 24
+13:57:59 STATUS Проверяю серверы: 7 из 24
+13:57:59 STATUS Проверяю серверы: 8 из 24
+13:58:00 STATUS Проверяю серверы: 9 из 24
+13:58:00 STATUS Проверяю серверы: 10 из 24
+13:58:00 STATUS Проверяю серверы: 11 из 24
+13:58:00 STATUS Проверяю серверы: 12 из 24
+13:58:01 STATUS Проверяю серверы: 13 из 24
+13:58:01 STATUS Проверяю серверы: 14 из 24
+13:58:01 STATUS Проверяю серверы: 15 из 24
+13:58:01 STATUS Проверяю серверы: 16 из 24
+13:58:01 STATUS Проверяю серверы: 17 из 24
+13:58:03 STATUS Проверяю серверы: 18 из 24
+13:58:03 STATUS Проверяю серверы: 19 из 24
+13:58:03 STATUS Проверяю серверы: 20 из 24
+13:58:03 STATUS Проверяю серверы: 21 из 24
+13:58:04 STATUS Проверяю серверы: 22 из 24
+13:58:04 STATUS Проверяю серверы: 23 из 24
+13:58:05 STATUS Проверяю серверы: 24 из 24
+13:58:05 STATUS Общий VPN: 🇱🇹 Литва · 222 мс
+13:58:06 STATUS ChatGPT подключён через США
+13:58:06 PASS full VPN selects an available latency-tested node
+13:58:06 PASS full VPN leaves OpenAI rules pinned to US
+13:58:06 Other sites in full mode: loc=DE
+13:58:07 PASS ChatGPT stays in US while general VPN is on
+13:58:11 STATUS ChatGPT через США · остальной интернет напрямую
+13:58:13 STATUS ChatGPT подключён через США
+13:58:13 PASS full VPN off restores DIRECT while US routing remains
+13:58:13 TEST accidental foreign routing: select another GLOBAL node and change core mode; always restore in finally
+13:58:13 PASS mandatory bridge immediately rejects a modified global route to a different server
+13:58:16 Native probe: {"Success":false,"Error":"ConnectFailure","Process":"codex-route-probe"}
+13:58:16 PASS independent guard blocks native clients after foreign/global routing is detected
+13:58:17 STATUS ChatGPT подключён через США
+13:58:17 TEST unavailable upstream: temporarily replace only the selected US endpoint; always restore in finally
+13:58:17 STATUS Сервер США недоступен — жду восстановления
+13:58:17 PASS unavailable US endpoint blocks the real bridge without direct fallback
+13:58:20 Native probe: {"Success":false,"Error":"ConnectFailure","Process":"codex-route-probe"}
+13:58:20 PASS native Codex-like process cannot bypass the unavailable US endpoint
+13:58:21 STATUS ChatGPT подключён через США
+13:58:22 STATUS ChatGPT подключён через США
+13:58:23 PASS US route recovers automatically after the endpoint is restored
+13:58:23 PASS real subscription source unchanged by all tests
+13:58:23 COMPLETE real setup and routing checks passed
