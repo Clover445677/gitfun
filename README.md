@@ -5,20 +5,27 @@
 | Проект | Назначение | Документация |
 | --- | --- | --- |
 | **Алевтина** (`alevtina/`) | Настройка VPN и маршрутизация ChatGPT/OpenAI через FlClashX на Windows | [Инструкция](alevtina/README.md) |
-| **Pika / Pikabaka** | ИИ-помощник для встреч и интервью: расшифровка речи и подсказки | [Отдельный репозиторий](https://github.com/Clover445677/pikabaka) |
+| **Pika / Pikabaka** (`pikabaka/`) | ИИ-помощник для встреч и интервью: расшифровка речи и подсказки | [Установка и запуск](pikabaka/README.md) |
 | **SMM Brief Generator** (`project/smm2/`) | Веб-приложение для подготовки SMM-ТЗ копирайтеру и дизайнеру с помощью Ollama | [Установка и запуск](project/smm2/README.md) |
 | **Windows Update backup** (`wu-backup/`) | Резервные копии настроек реестра служб обновления Windows | [Что это за файлы](wu-backup/README.md) |
+
+## Структура папок
+
+```text
+gitfun/
+├── alevtina/
+├── pikabaka/
+├── project/
+│   └── smm2/
+└── wu-backup/
+```
 
 ## Загрузка проектов
 
 ```bash
-git clone --recurse-submodules https://github.com/Clover445677/gitfun.git
+git clone https://github.com/Clover445677/gitfun.git
 ```
 
-Если репозиторий уже скачан, загрузите Pika:
+Все исходники находятся в обычных папках репозитория. Инструкции по запуску каждого проекта указаны в таблице выше.
 
-```bash
-git submodule update --init pikabaka
-```
-
-`pikabaka/` подключена как подмодуль из отдельного репозитория [Clover445677/pikabaka](https://github.com/Clover445677/pikabaka). Инструкции Pika находятся в его README. У остальных проектов свои инструкции в папках, указанных выше.
+Локальные `.env`, ключи доступа, базы данных, зависимости и кэш исключены из Git через `.gitignore`.

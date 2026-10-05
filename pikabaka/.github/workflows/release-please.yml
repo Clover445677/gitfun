@@ -1,0 +1,28 @@
+name: release-please
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: release-please-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          config-file: .release-please-config.json
+          manifest-file: .release-please-manifest.json
+      - name: Summary
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        run: |
+          echo "Release created: ${{ steps.release.outputs.tag_name }}"
+          echo "Next step: locally run \`pnpm run app:build\`, then \`gh release upload ${{ steps.release.outputs.tag_name }} release/Pika-*-arm64.dmg release/Pika-*-arm64-mac.zip release/Pika-*.blockmap\` to attach signed/notarized macOS artifacts."

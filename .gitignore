@@ -1,0 +1,24 @@
+# Local credentials and settings
+.env
+.env.*
+!.env.example
+credentials.json
+
+# Dependencies and virtual environments
+node_modules/
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local databases
+*.db
+*.db-shm
+*.db-wal
+
+# OS files
+.DS_Store
+Thumbs.db
