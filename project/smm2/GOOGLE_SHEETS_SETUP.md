@@ -13,8 +13,10 @@
 
 ## 2. Установка зависимостей
 
+Выполните команды из корня репозитория `gitfun`:
+
 ```cmd
-cd H:\gitfun\project\smm2
+cd project\smm2
 py -m pip install -r requirements.txt
 ```
 
