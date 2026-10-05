@@ -1,13 +1,12 @@
 # gitfun
 
-Каталог независимых проектов и вспомогательных файлов.
+Каталог независимых проектов.
 
 | Проект | Назначение | Документация |
 | --- | --- | --- |
 | **Алевтина** (`alevtina/`) | Настройка VPN и маршрутизация ChatGPT/OpenAI через FlClashX на Windows | [Инструкция](alevtina/README.md) |
 | **Pika / Pikabaka** (`pikabaka/`) | ИИ-помощник для встреч и интервью: расшифровка речи и подсказки | [Установка и запуск](pikabaka/README.md) |
 | **SMM Brief Generator** (`project/smm2/`) | Веб-приложение для подготовки SMM-ТЗ копирайтеру и дизайнеру с помощью Ollama | [Установка и запуск](project/smm2/README.md) |
-| **Windows Update backup** (`wu-backup/`) | Резервные копии настроек реестра служб обновления Windows | [Что это за файлы](wu-backup/README.md) |
 
 ## Структура папок
 
@@ -15,9 +14,8 @@
 gitfun/
 ├── alevtina/
 ├── pikabaka/
-├── project/
-│   └── smm2/
-└── wu-backup/
+└── project/
+    └── smm2/
 ```
 
 ## Загрузка проектов
