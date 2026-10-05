@@ -1,0 +1,7 @@
+PASS storage probing rejects unavailable directories and accepts portable storage without changing access rights.
+PASS installer failures distinguish absent/denied elevation and preserve Windows error codes.
+PASS profile discovery, credentials preservation, persistent overrides, US pinning in full VPN, domain boundaries.
+PASS core safety rejects global mode, disabled TUN, and modified US routes; latency selection excludes unavailable nodes.
+PASS real loopback CONNECT relay preserves bytes; unsafe route and stopped upstream return 503; local destinations are rejected; no direct fallback.
+PASS server-name and CONNECT input validation.
+PASS Chrome PAC domain boundaries and no DIRECT fallback for OpenAI.

@@ -1,0 +1,2 @@
+PASS application can create and atomically replace a file in its selected settings directory; existing settings unchanged.
+Directory: C:\Users\user\ChatGPTBridge\ChatGPTBridge-data

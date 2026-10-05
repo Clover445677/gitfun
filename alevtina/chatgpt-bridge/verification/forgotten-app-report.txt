@@ -1,0 +1,3 @@
+﻿Forgotten-app check 2026-10-05T13:56:40.8455349Z
+{"Success":false,"Error":"ConnectFailure","Process":"codex-route-probe"}
+PASS native Internet request blocked while GUI is closed; Chrome mandatory proxy unavailable with no DIRECT fallback.

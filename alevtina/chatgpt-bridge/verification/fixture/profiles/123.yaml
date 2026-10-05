@@ -1,0 +1,16 @@
+mixed-port: 7890
+mode: global
+secret: 'test-secret'
+proxies:
+  - name: 'USA'
+    type: vless
+    server: example.invalid
+    uuid: synthetic-not-a-real-secret
+  - name: 'Latvia'
+    type: vless
+proxy-groups:
+  - name: old-group
+    type: select
+    proxies: [USA, Latvia]
+rules:
+  - MATCH,old-group
